@@ -48,15 +48,24 @@ SELECT c.ContactName
 FROM Customers c JOIN Orders o ON c.CustomerID = o.CustomerID
 WHERE c.City != o.ShipCity
 
---8. List 5 most popular products, their average price, and the customer city that ordered most quantity of it. od.orderID, od.ProductID, o.CustomerID, c.City, p.ProductName
--- I've been working on this problem for a long time, just trying to solve it using sub-query and joins i cant reach the answer.
-
+--8. List 5 most popular products, their average price, and the customer city that ordered most quantity of it. 
+WITH popular_products AS (
 SELECT TOP 5 p.ProductName, AVG(od.UnitPrice) AS [AveragePrice], SUM(od.Quantity)  AS [TotalSold]
 FROM [Order Details] od JOIN Orders o     ON o.OrderID = od.OrderID
     JOIN Customers c  ON c.CustomerID = o.CustomerID
     JOIN Products p   ON p.ProductID = od.ProductID
 GROUP BY p.ProductName
-ORDER BY SUM(od.Quantity) DESC;
+ORDER BY SUM(od.Quantity) DESC
+)
+SELECT DISTINCT pp.ProductName, shipCity , COUNT(*)
+FROM [Order Details] od JOIN Orders o ON od.OrderID = o.OrderID
+    JOIN products p ON od.ProductID = p.ProductID
+    JOIN popular_products pp ON p.ProductName = pp.productName
+
+    GROUP BY  pp.ProductName, shipCity 
+    
+
+
 
 --9. List all cities that have never ordered something but we have employees there.
 --a. use subquery
