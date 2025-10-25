@@ -48,17 +48,15 @@ SELECT c.ContactName
 FROM Customers c JOIN Orders o ON c.CustomerID = o.CustomerID
 WHERE c.City != o.ShipCity
 
---8. List 5 most popular products, their average price, and the customer city that ordered most quantity of it. 
+--8. List 5 most popular products, their average price, and the customer city that ordered most quantity of it. od.orderID, od.ProductID, o.CustomerID, c.City, p.ProductName
+-- I've been working on this problem for a long time, just trying to solve it using sub-query and joins i cant reach the answer.
 
-SELECT TOP 5 od.productID,p.ProductName,  SUM(Quantity) AS [most sales]
-FROM [Order Details] od JOIN Products p ON od.ProductID = p.ProductID
-    JOIN Orders o ON od.OrderID = o.OrderID
-    JOIN customers c ON o.CustomerID = c.CustomerID
-GROUP BY od.ProductID ,p.ProductName
-ORDER BY [most sales] DESC
-
-SELECT
-FROM Customers c JOIN orders o ON c.CustomerID = o.CustomerID JOIN 
+SELECT TOP 5 p.ProductName, AVG(od.UnitPrice) AS [AveragePrice], SUM(od.Quantity)  AS [TotalSold]
+FROM [Order Details] od JOIN Orders o     ON o.OrderID = od.OrderID
+    JOIN Customers c  ON c.CustomerID = o.CustomerID
+    JOIN Products p   ON p.ProductID = od.ProductID
+GROUP BY p.ProductName
+ORDER BY SUM(od.Quantity) DESC;
 
 --9. List all cities that have never ordered something but we have employees there.
 --a. use subquery
@@ -74,9 +72,21 @@ WHERE o.ShipCity IS NULL
 
 --10.  List one city, if exists, that is the city from where the employee sold most orders 
 -- (not the product quantity) is, and also the city of most total quantity of products ordered from. (tip: join  sub-query)
-SELECT e.EmployeeID, o.ShipCity, RANK() OVER(PARTITION BY e.EmployeeID ORDER BY COUNT(o.shipCity) )
+
+SELECT TOP 1(SELECT TOP 1 e.city
+FROM orders o JOIN employees e ON o.EmployeeID = e.EmployeeID
+GROUP BY e.City
+ORDER BY COUNT(e.EmployeeID)) AS [sold most orders],
+(SELECT TOP 1 c.City
+FROM [Order Details] od JOIN orders o ON od.OrderID = o.OrderID
+    JOIN Customers c ON o.CustomerID = c.customerID 
+GROUP BY c.City
+ORDER BY SUM(od.Quantity) DESC, c.City) AS [city of most total quantity]
+FROM Orders
+
+
+SELECT *
 FROM Orders o JOIN Employees e ON o.EmployeeID = e.EmployeeID
-GROUP BY e.EmployeeID, o.ShipCity
 
 --11. How do you remove the duplicates record of a table?
 -- * You can remove the duplicate record by using a DISTINCT keyword in your SELECT statements.
