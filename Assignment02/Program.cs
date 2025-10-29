@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
+using System;
 using System.Collections.Immutable;
 
 Console.WriteLine("Hello, World!");
@@ -59,25 +59,29 @@ if (command.StartsWith("+"))
 {
     strArr[size++] = command.Substring(1, command.Length - 1).Trim();
 }
+else if (command.StartsWith("--"))
+{
+    size = 0;
+    strArr = new String[strArr.Length];
+}
 else if (command.StartsWith("-"))
 {
-    Console.WriteLine("Enter command (+ item, - item, or -- to clear)):");
-    for (int i = 0; i < strArr.Length; i++)
+    for (int i = 0; i < size; i++)
     {
+        
         if (strArr[i].Equals(command.Substring(1, command.Length - 1).Trim()))
         {
             for (int j = i + 1; j < strArr.Length; j++)
             {
                 strArr[j - 1] = strArr[j];
             }
-
             size--;
             break;
         }
     }
 }
-else if (command.StartsWith("--"))
+
+for (int i = 0; i < size; i++)
 {
-    size = 0;
-    strArr = new String[strArr.Length];
+    Console.WriteLine(strArr[i]);
 }

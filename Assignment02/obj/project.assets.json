@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yoonk\\RiderProjects\\Assignment02\\Assignment02\\Assignment02.csproj",
+      "projectUniqueName": "C:\\Users\\yoonk\\OneDrive - George Mason University - O365 Production\\Desktop\\git\\AntraTraining\\Assignment02\\Assignment02.csproj",
       "projectName": "Assignment02",
-      "projectPath": "C:\\Users\\yoonk\\RiderProjects\\Assignment02\\Assignment02\\Assignment02.csproj",
+      "projectPath": "C:\\Users\\yoonk\\OneDrive - George Mason University - O365 Production\\Desktop\\git\\AntraTraining\\Assignment02\\Assignment02.csproj",
       "packagesPath": "C:\\Users\\yoonk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yoonk\\RiderProjects\\Assignment02\\Assignment02\\obj\\",
+      "outputPath": "C:\\Users\\yoonk\\OneDrive - George Mason University - O365 Production\\Desktop\\git\\AntraTraining\\Assignment02\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
