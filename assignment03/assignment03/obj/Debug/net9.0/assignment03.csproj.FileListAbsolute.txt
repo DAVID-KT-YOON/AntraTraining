@@ -1,0 +1,15 @@
+C:\Users\yoonk\OneDrive - George Mason University - O365 Production\Desktop\git\AntraTraining\assignment03\assignment03\bin\Debug\net9.0\assignment03.exe
+C:\Users\yoonk\OneDrive - George Mason University - O365 Production\Desktop\git\AntraTraining\assignment03\assignment03\bin\Debug\net9.0\assignment03.deps.json
+C:\Users\yoonk\OneDrive - George Mason University - O365 Production\Desktop\git\AntraTraining\assignment03\assignment03\bin\Debug\net9.0\assignment03.runtimeconfig.json
+C:\Users\yoonk\OneDrive - George Mason University - O365 Production\Desktop\git\AntraTraining\assignment03\assignment03\bin\Debug\net9.0\assignment03.dll
+C:\Users\yoonk\OneDrive - George Mason University - O365 Production\Desktop\git\AntraTraining\assignment03\assignment03\bin\Debug\net9.0\assignment03.pdb
+C:\Users\yoonk\OneDrive - George Mason University - O365 Production\Desktop\git\AntraTraining\assignment03\assignment03\obj\Debug\net9.0\assignment03.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yoonk\OneDrive - George Mason University - O365 Production\Desktop\git\AntraTraining\assignment03\assignment03\obj\Debug\net9.0\assignment03.AssemblyInfoInputs.cache
+C:\Users\yoonk\OneDrive - George Mason University - O365 Production\Desktop\git\AntraTraining\assignment03\assignment03\obj\Debug\net9.0\assignment03.AssemblyInfo.cs
+C:\Users\yoonk\OneDrive - George Mason University - O365 Production\Desktop\git\AntraTraining\assignment03\assignment03\obj\Debug\net9.0\assignment03.csproj.CoreCompileInputs.cache
+C:\Users\yoonk\OneDrive - George Mason University - O365 Production\Desktop\git\AntraTraining\assignment03\assignment03\obj\Debug\net9.0\assignment03.sourcelink.json
+C:\Users\yoonk\OneDrive - George Mason University - O365 Production\Desktop\git\AntraTraining\assignment03\assignment03\obj\Debug\net9.0\assignment03.dll
+C:\Users\yoonk\OneDrive - George Mason University - O365 Production\Desktop\git\AntraTraining\assignment03\assignment03\obj\Debug\net9.0\refint\assignment03.dll
+C:\Users\yoonk\OneDrive - George Mason University - O365 Production\Desktop\git\AntraTraining\assignment03\assignment03\obj\Debug\net9.0\assignment03.pdb
+C:\Users\yoonk\OneDrive - George Mason University - O365 Production\Desktop\git\AntraTraining\assignment03\assignment03\obj\Debug\net9.0\assignment03.genruntimeconfig.cache
+C:\Users\yoonk\OneDrive - George Mason University - O365 Production\Desktop\git\AntraTraining\assignment03\assignment03\obj\Debug\net9.0\ref\assignment03.dll
