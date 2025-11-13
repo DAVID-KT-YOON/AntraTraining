@@ -1,0 +1,26 @@
+body{
+    padding:0;
+}
+main{
+    background-color: gray;
+    display:flex;
+}
+ul{
+    list-style: none;
+}
+footer{
+    display:flex;
+    background-color: black;
+    color:white;
+}
+.sns{
+    display:flex;
+    margin-left:auto;
+}
+.sns>a{
+    padding-right:50px;
+}
+a{
+    color:white;
+    text-decoration: none;
+}

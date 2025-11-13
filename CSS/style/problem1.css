@@ -1,0 +1,21 @@
+
+header{
+    display:flex;
+    background-color: blue;
+}
+.nav > ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+.nav>ul>li>a{
+    color :black;
+    display:flex;
+}
+.dropdown{
+    display:none;
+}
+.nav li:hover > .dropdown {
+    display: block;
+    background-color: red;
+}

@@ -1,0 +1,39 @@
+.nav{
+    display:flex;
+    background-color: blue;
+    height:50px;
+
+}
+.nav>button{
+    margin-left:auto;
+    padding-right:50px;
+    height:40%;
+    background-color: rgb(238, 176, 7);
+    color:white;
+}
+p{
+    color:rgb(30, 39, 165);
+    font: 500px;
+}
+div{
+    display:flex;
+    background-color: blue;
+}
+article{
+    background-color: red;
+    width: 50px;
+    height: 100px;
+    padding:5px;
+    margin:5px;
+    border: 1px solid black;
+}
+ul{
+    display:flex;
+    list-style:none;
+}
+li{
+    border: 1px solid skyblue;
+    margin:5px;
+    background-color: skyblue;
+    color:white;
+}
