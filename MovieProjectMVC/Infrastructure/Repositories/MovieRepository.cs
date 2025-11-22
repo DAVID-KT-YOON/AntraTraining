@@ -1,6 +1,7 @@
 ﻿using ApplicationCore.Contracts.Repositories;
 using ApplicationCore.Entities;
 using Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories;
 
@@ -14,5 +15,17 @@ public class MovieRepository: BaseRepository<Movie>, IMovieRepository
     {
         var movies = _context.Movies.OrderByDescending(m => m.Revenue).Take(20);
         return movies;
+    }
+
+    public Movie GetMovieWithGenresAndReview(int id)
+    {
+        return _context.Movies
+            .Include(m => m.MovieGenres)
+            .ThenInclude(mg => mg.Genre)
+            .Include(m => m.Reviews)
+            .Include(m => m.Trailers)
+            .Include(m => m.MovieCasts)
+            .ThenInclude(mc => mc.Cast)
+            .FirstOrDefault(m => m.Id == id);
     }
 }

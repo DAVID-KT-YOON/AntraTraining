@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MovieProjectMVC.Controllers;
 
-public class CastController:Controller
+public class CastsController:Controller
 {
     private readonly ICastService _castService;
-    public CastController(ICastService castService)
+    public CastsController(ICastService castService)
     {
         _castService = castService;
     }

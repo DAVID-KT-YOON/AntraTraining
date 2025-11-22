@@ -29,7 +29,7 @@ public class MovieService: IMovieService
 
     public MovieDetailsModel GetMovieDetails(int id)
     {
-        var movie = _repository.GetById(id);
+        var movie = _repository.GetMovieWithGenresAndReview(id);
         if (movie == null)
         {
             return null;
@@ -41,8 +41,13 @@ public class MovieService: IMovieService
             Title = movie.Title,
             PosterUrl = movie.PosterUrl,
             Overview = movie.Overview,
-            Tagline = movie.Tagline,
-            Budget = movie.Budget,
+            Reviews = movie.Reviews?.ToList(),
+            Genres= movie.MovieGenres?.Select(mg => mg.Genre).ToList(),
+            Price = movie.Price,
+            Trailers = movie.Trailers?.ToList(),
+            Casts    = movie.MovieCasts?.Select(mc => mc.Cast).ToList(),
+            OriginalLanguage= movie.OriginalLanguage,
+            ReleaseDate= movie.ReleaseDate,
             Revenue = movie.Revenue
         };
         return movieDetailsModel;
